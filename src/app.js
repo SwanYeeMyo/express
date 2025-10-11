@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import router from "./routes/test.js";
 
 const app = express();
 
@@ -22,4 +23,5 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 //for images
 app.use(express.static("public"));
 
+app.use("/test", router);
 export { app };
